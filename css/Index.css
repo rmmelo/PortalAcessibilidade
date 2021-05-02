@@ -1,0 +1,22 @@
+  .espacamento {
+    margin-top: 50px ;
+    margin-bottom: 50px;
+  }
+
+  .tituloquemsomos{
+    text-align: center;
+  }
+
+  .titulohome{
+    text-align: center;    
+  }
+
+    .caixa {
+      text-align: center;
+      border:2px solid #039; 
+      padding: 10px; 
+      border-radius: 40px;
+      }
+
+ 
+
