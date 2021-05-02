@@ -8,106 +8,175 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/deficiencias.css">
+    <link rel="stylesheet" href="css/lesgislacao.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Legislação</title>
   </head>
   <body>
-
     <div class="container-fluid">
         <div class="row">
-            <header>
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-                    <a class="navbar-brand" href="index.php">
-                        Nav
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ChamaOEsau"
-                        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+            <header class="row ">
+                <div>
+                    <!--Aqui ficará o nav interativo de navegação :3-->
+                                <nav style="font-size: 15px"  class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">	
+                                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                                        <ul class="navbar-nav mr-auto">
+                                            <li class="nav-item">
+                                                <a class="nav-link button" href="#" id="back-to-top">[1] Ir para o topo da pagina </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link btn" href="#conteudo">[2] Ir para conteudo</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link btn" href="#rodape">[3] Ir para o rodapé</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link btn"  id="aumentar">+A</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link btn" id="diminuir">-A</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                </div>
             
-                    <div class="collapse navbar-collapse" id="ChamaOEsau">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">deficiencias</a>
-                                <div class="dropdown-menu" aria-labelledby="dropdown01">
-                                    <a class="dropdown-item" href="axe-primary.php">tema1</a>
-                                    <a class="dropdown-item" href="forro-primary.php">tema2</a>
-                                    <a class="dropdown-item" href="rock-primary.php">tema3</a>
-                                    <a class="dropdown-item" href="mpb-primary.php">tema4</a>
-                                    <a class="dropdown-item" href="samba-primary.php">tema5</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="quem-somos.php" tabindex="-1" aria-disabled="true">Quem somos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="normas.php" tabindex="-1" aria-disabled="true">Normas de uso</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contato.php" tabindex="-1" aria-disabled="true">Contato</a>
-                            </li>
-                        </ul>
-                        <form method="get" action="http://www.google.com/search" class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="text" placeholder="Pesquise" aria-label="Search" name="q">
-                            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Pesquisar</button>
-                        </form>
-                    </div>
-                </nav>
+                <div class="col-lg-12 col-md-12 col-sm-12 espacamentonav">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light aspectosnav">
+                        <div class="container-fluid">
+                          <a class="navbar-brand" href="Index.html"><img width="100" height="100" src="images/logo.png" alt="logo-do-site"></a>
+                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                              <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="Index.html">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="QuemSomos.html">Quem Somos</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="Deficiencias.html">Deficiências</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="Legislacao.html">Legislação</a>
+                              </li>
 
-            </header>
-            <main class="col-8 offset-2">
-                <h1>Legislação</h1>
-                <div class="row">
-                    <div class="col-6">
-                        <img class="img-fluid" src="images/download.png" alt="">
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
+                </div>       
+            
+                    
+</header>
+            <main class="role="main" id="mainp">
+                <article class="row">
+                    <div class="col-10 offset-1">
+                        <img class="img-legislacao"src="images/legislação.jpg" alt="" height="350" width="100%">
                     </div>
-                    <div class="col-6">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum rerum enim mollitia, sint non dolorem fuga fugit cupiditate neque praesentium recusandae? Nobis similique explicabo mollitia minima, perferendis libero delectus magni.</p>
+                    <div id="conteudo" class="col-10 offset-1">
+                        <h1 class="text-center">Constituição Brasileira - Lei Brasileira de Inclusão</h1>
+                        <div class="mudar">
+                            <p>A atual Constituição Brasileira foi publicada em 1988 e tinha como objetivo garantir os direitos sociais e individuais das pessoas no Brasil, inclusive os das pessoas com deficiência. Foi a partir dela que surgiram várias leis e normas mais específicas visando garantir acessibilidade e inclusão, como a Lei de Cotas, publicada em 1991, que tem como foco a inclusão de PCDs no mercado de trabalho.</p>
+                            <p> Já nos anos 2000, foi lançada a Lei Nº 10.098, a primeira totalmente voltada a acessibilidade. Essa já tinha a visão de quebrar barreiras no dia a dia, sejam elas urbanas, arquitetônicas, nos transportes ou na comunicação. Assegurando assim, a autonomia das pessoas com deficiência e oportunidade para todos.</p>
+                            <img class="img-martelo" src="images/martelo.jpg" alt="" width="100%" height="300">
+                            <p> Quatro anos mais tarde, em 2004, saiu o Decreto Nº 5296 que reforçou o que lei Nº 10.098 já dizia, como atendimento prioritário, projetos arquitetônicos e urbanísticos acessíveis, acesso a comunicação e informação, e trouxe de novo as normas técnicas da ABNT como parâmetros de acessibilidades a serem seguidos.</p>
+                            <p>  Foi graças a esse decreto que a ABNT (Associação Brasileira de Normas Técnicas) lançou vários padrões de acessibilidade. Todos esses parâmetros estão reunidos no manual da ABNT 9050, e tem como foco a acessibilidade em um projeto, construção, instalação e adaptação de edificações.</p>
+                        </div>
+                    </div>
+                    <section class="citacao-legislacao col-8 offset-2">
+                        <p>“Toda pessoa com deficiência tem direito à igualdade de oportunidades com as demais pessoas e não sofrerá nenhuma espécie de discriminação.”</p>
+                    </section>
+                </article>
+            </main>
+            <footer id="rodape">
+                <div class="row">
+                    <div class="col offset-2">
+                    <h3 class="menu-do-site">Menu do site</h3>
+                    <ul>
+                        <li><a href="Index.html">Home</a></li>
+                        <li><a href="QuemSomos.html">Quem Somos</a></li>
+                        <li><a href="Deficiencias.html">Deficiências</a></li>
+                        <li><a href="Legislacao.html">Legislação</a></li>
+                    </ul>
+                    </div>
+                    <div class="col">
+                        <img class="img-fluid" src="images/logo.png" alt="logo do site">
                     </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae libero iure cupiditate alias praesentium dolorum sit, accusantium nihil excepturi ea eos rem autem, quaerat fugit maiores. Praesentium molestiae aliquid perferendis.</p>
-
-                <section class="row">
-                    <h2>Title 2</h2>
-                    <div class="col-6">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur soluta commodi facere laudantium optio adipisci inventore! Quod cupiditate, quis architecto repellendus illo sequi similique hic. Sit quia explicabo officia eos!</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur soluta commodi facere laudantium optio adipisci inventore! Quod cupiditate, quis architecto repellendus illo sequi similique hic. Sit quia explicabo officia eos!</p>
-                    </div>
-                    <div class="col-6">
-                        <img class="img-fluid" src="images/download.png" alt="">
-            
-                    </div>
-                </section>
-    
-            </main>
-            <footer>
-                <h3>Rodapé</h3>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li>Quem somos</li>
-                    <li>Deficiências</li>
-                    <li>Normas de uso</li>
-                    <li>Contato</li>
-                </ul>
+                
             </footer>
         </div>
     </div>
     
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-    -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    
+    <!--Aqui começa a mágica do javascript :3-->
+    <script type="text/javascript">
+    
+        //Aqui você ta pegando o botao aumentar  e diminuir pelo ID deles
+        var increase = document.querySelector("#aumentar");
+        var decrease = document.querySelector("#diminuir");
+    
+        // Aqui eu to pegando todos os campos de textos para mudar depois o atribudo font-size pela classe "mudar"
+        // basta colocar no atributp que ele vai cair aqui
+        var main = document.querySelector('.mudar');
+    
+        // Aqui criou uma função que pega o font-size que está "agora" 
+        var getfontsize = (el) => {
+            let size = window.getComputedStyle(el, null)
+            .getPropertyValue('font-size');
+            return parseFloat(size);
+        }
+    
+        // Aqui ele cria um evento de clicar, e quando clica ele chama a função pega o valor font-size e aumenta ele em +1
+        // Exemplo: uma tag p tem font-size de 12px, ele pega esse 12px e da +1 nela e salva no elemento dnovo
+        increase.addEventListener('click', () => {
+            main.style.fontSize = (getfontsize(main) + 1) + 'px';
+        })
+    
+        //aqui é o evento ao contrario diminui 1 px
+        decrease.addEventListener('click', () => {
+            main.style.fontSize = (getfontsize(main) - 1) + 'px';
+        })
+    
+    
+    
+        //Aqui você está pegando o botão e jogando na variavel pelo id dele (lembra # = ID e . = class)
+        var btn = document.querySelector("#back-to-top");
+    
+    
+        // Aqui é o evento que se clicar no botão back-to-top ele vai escrolar para posição x=0(vertical) y=0(horizontal)
+        btn.addEventListener("click", function() {
+            window.scrollTo(0, 0);
+        });
+    
+        //Aqui eu crio uma função que sempre que foi pressionado uma tecla ele entra aqui
+        document.addEventListener("keypress", function(e) {
+            // quando vc presiona e ele cai aqui, a varaivel e vai ser populada com os valores
+            // no caso e.key for 1, é se vc pressionou a tecla 1, então ela entra aqui
+            if (e.key === '1') {
+                // Mesma coisa que o evento clic, ele volta para a posição 0 da tela
+                window.scrollTo(0, 0);
+            }
+            // aqui tecla 2
+            if (e.key === '2') {
+                // aqui ele vai direto para o a div que tem esse id
+                location.href = "#conteudo";
+            }
+            // aqui tecla 3
+            if (e.key === '3') {
+                // Aqui é a mesma coisa, ele vai direto para a div q tem esse id
+                location.href = "#rodape";
+            }
+        });
+    
+    
+    </script>
   </body>
 </html>

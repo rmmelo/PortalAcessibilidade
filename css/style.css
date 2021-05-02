@@ -1,0 +1,51 @@
+body{
+  font-size: 1.3rem;
+}
+.aspectosnav {
+  background-color: #2D9CDB!important;
+  color: aliceblue  !important;
+}
+
+.aspectosnav ul li a {
+  font-size: 1.4rem  !important;
+  color: aliceblue !important;
+}
+.espacamentonav {
+  margin-top: 55px ;
+}
+
+
+footer {
+    background-color: #2D9CDB;
+    
+}
+footer li{
+  list-style: none;
+}
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    
+  }
+  a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:active {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+ .menu-do-site{
+   color: white;
+   margin-top: 15px;
+ }
+ 
