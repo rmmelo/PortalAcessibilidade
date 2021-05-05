@@ -5,13 +5,21 @@ body{
   background-color: #2D9CDB!important;
   color: aliceblue  !important;
 }
-
+/*
 .aspectosnav ul li a {
   font-size: 1.4rem  !important;
   color: aliceblue !important;
-}
+}*/
 .espacamentonav {
   margin-top: 55px ;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: yellow;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: 
 }
 
 
