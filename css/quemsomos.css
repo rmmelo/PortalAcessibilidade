@@ -21,9 +21,8 @@
   }
 
     .caixa {
-      color:white;
-      background-color:#2D9CDB!important;
-      ;
+      color: black;
+      background-color:#D8E1FE!important;
       text-align: center;
       border:2px solid #039; 
       padding: 10px; 
@@ -31,6 +30,8 @@
       }
 
       button {
+        font-weight: bolder;
+        background-color: #2D9CDB;
         border: none;
         color: black;
         padding: 15px 32px;
@@ -43,4 +44,11 @@
         border-radius:12px ;
     }
  
+    body{
+      text-align: justify;
+    }
 
+
+  .espale{
+    margin-top: 100px;
+  }
