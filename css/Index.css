@@ -1,6 +1,6 @@
   .espacamento {
-    margin-top: 50px ;
-    margin-bottom: 50px;
+    margin-top: 30px ;
+    margin-bottom: 40px;
   }
 
   .tituloquemsomos{
@@ -33,12 +33,9 @@
         border-radius:12px ;
     }
 
-    body{
-      text-align: justify;
-    }
-
+body{text-align: justify;}
     .espcaixa{
-      padding-right: 40px;
+      padding-right: 10px;
     }
 
     .espimg{
@@ -49,3 +46,8 @@
     .fontimg{
      font-size: 4.5mm;
     }
+
+    .fontimg2{
+      text-align: center;
+      font-size: 5mm;
+     }
