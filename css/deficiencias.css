@@ -1,21 +1,15 @@
-footer {
-    background-color: black;
-}
-a:link {
-    color: black;
-    background-color: transparent;
-    text-decoration: none;
+.caixa {
+  color: black;
+  background-color:#D8E1FE!important;
+  text-align: center;
+  border:2px solid #039; 
+  padding: 10px; 
+  border-radius: 40px;
+  }  
+
+  .d-1{
+    margin-bottom: 50px;
   }
-  a:visited {
-    color: black;
-    background-color: transparent;
-    text-decoration: none;
-  }
-  a:hover {
-    color: blue;
-    background-color: transparent;
-  }
-  a:active {
-    color: gray;
-    background-color: transparent;
+  .up-1{
+    margin-top: 50px;
   }
