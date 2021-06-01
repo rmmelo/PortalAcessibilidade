@@ -1,54 +1,78 @@
   .espacamento {
-    margin-top: 50px ;
-    margin-bottom: 50px;
+      margin-top: 50px;
+      margin-bottom: 50px;
   }
-
-  .espacodireita{
-    margin-top: 30px;
-    margin-bottom: 300px;
+  
+  .espacodireita {
+      margin-top: 30px;
+      margin-bottom: 300px;
   }
-
-  .espacocentral{
-    margin-bottom: 30px;
+  
+  .espacocentral {
+      margin-bottom: 30px;
   }
-
-  .tituloquemsomos{
-    text-align: center;
-  }
-
-  .titulohome{
-    text-align: center;    
-  }
-
-    .caixa {
-      color: black;
-      background-color:#D8E1FE!important;
+  
+  .tituloquemsomos {
       text-align: center;
-      border:2px solid #039; 
-      
+  }
+  
+  .titulohome {
+      text-align: center;
+  }
+  
+  .caixa {
+      color: black;
+      background-color: #D8E1FE!important;
+      text-align: center;
+      border: 2px solid #039;
       border-radius: 40px;
-      }
-
-      button {
-        font-weight: bolder;
-        background-color: #2D9CDB;
-        border: none;
-        color: black;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius:12px ;
-    }
- 
-    body{
+  }
+  
+  button {
+      font-weight: bolder;
+      background-color: #2D9CDB;
+      border: none;
+      color: black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 12px;
+  }
+  
+  body {
       text-align: justify;
-    }
-
-
-  .espale{
-    margin-top: 100px;
+  }
+  
+  .espale {
+      margin-top: 100px;
+  }
+  
+  .widthimg {
+      width: 100%;
+  }
+  
+  .btn-primary {
+      color: #fff;
+      background-color: #2D9CDB;
+      border-color: #2D9CDB;
+  }
+  
+  .btn-primary:hover {
+      color: yellow;
+      background-color: #2D9CDB;
+      border-color: #2D9CDB;
+  }
+  
+  .btn-check:active+.btn-primary,
+  .btn-check:checked+.btn-primary,
+  .btn-primary.active,
+  .btn-primary:active,
+  .show>.btn-primary.dropdown-toggle {
+      color: #fff;
+      background-color: #2D9CDB;
+      border-color: #2D9CDB
   }

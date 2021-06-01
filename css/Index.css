@@ -1,53 +1,79 @@
   .espacamento {
-    margin-top: 30px ;
-    margin-bottom: 40px;
+      margin-top: 30px;
+      margin-bottom: 40px;
   }
-
-  .tituloquemsomos{
-    text-align: center;
-  }
-
-  .titulohome{
-    text-align: center;    
-  }
-
-    .caixa {
+  
+  .tituloquemsomos {
       text-align: center;
-      border:2px solid #039; 
-      padding: 10px; 
+  }
+  
+  .titulohome {
+      text-align: center;
+  }
+  
+  .widthimg {
+      width: 100%;
+  }
+  
+  .caixa {
+      text-align: center;
+      border: 2px solid #039;
+      padding: 10px;
       border-radius: 40px;
-      }
-
- 
-      button {
-        background-color: #2D9CDB;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius:12px ;
-    }
-
-body{text-align: justify;}
-    .espcaixa{
+  }
+  
+  .botao {
+      background-color: #2D9CDB;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 12px;
+  }
+  
+  .btn-primary {
+      background-color: #2D9CDB;
+  }
+  
+  body {
+      text-align: justify;
+  }
+  
+  .espcaixa {
       padding-right: 10px;
-    }
-
-    .espimg{
+  }
+  
+  .espimg {
       padding-top: 50px;
-     
-    }
-
-    .fontimg{
-     font-size: 4.5mm;
-    }
-
-    .fontimg2{
+  }
+  
+  .fontimg2 {
       text-align: center;
       font-size: 5mm;
-     }
+  }
+  
+  .btn-primary {
+      color: #fff;
+      background-color: #2D9CDB;
+      border-color: #2D9CDB;
+  }
+  
+  .btn-primary:hover {
+      color: yellow;
+      background-color: #2D9CDB;
+      border-color: #2D9CDB;
+  }
+  
+  .btn-check:active+.btn-primary,
+  .btn-check:checked+.btn-primary,
+  .btn-primary.active,
+  .btn-primary:active,
+  .show>.btn-primary.dropdown-toggle {
+      color: #fff;
+      background-color: #2D9CDB;
+      border-color: #2D9CDB
+  }
