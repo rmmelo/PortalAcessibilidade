@@ -36,10 +36,10 @@
                                 <a class="nav-link btn" href="#rodape">[3] Ir para o rodapé</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link btn" id="aumentar">+A</a>
+                                <a class="nav-link btn" tabindex="0" id="aumentar">+A</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link btn" id="diminuir">-A</a>
+                                <a class="nav-link btn"  tabindex="0" id="diminuir">-A</a>
                             </li>
                         </ul>
                     </div>
@@ -81,7 +81,7 @@
         </header>
 
 
-        <main role="main" id="main" class="mudar">
+        <main role="main" id="main">
             <article class="row espacamento" id="conteudo">
 
                 <div class="col-lg-10 col-md-10 col-sm-10 offset-1">
@@ -89,10 +89,10 @@
                 </div>
 
                 <div class="col-lg-10 col-md-10 col-sm-10 offset-1 titulohome espacamento">
-                    <h1>Quem somos?</h1>
+                    <h1 class="mudar">Quem somos?</h1>
                 </div>
 
-                <div class="col-lg-10 col-md-10 col-sm-10 offset-1">
+                <div class="col-lg-10 col-md-10 col-sm-10 offset-1 mudar">
                     Nossa equipe é formada por profissionais que buscam excelência em suas atividades com foco em nossos
                     usuários. Nossa missão é fazer de tudo para que você seja sempre atendido da melhor maneira
                     possível. Nosso pilar é a responsabilidade social contribuindo para sociedade através da diversidade
@@ -109,9 +109,9 @@
                     <div class="espale col-lg-12 col-md-12 col-sm-12">
                         <img src="images/Ale.png" alt="Imagem da colaboradora Alexandra Oliveira" />
                         <br>
-                        <h3>Alexandra Oliveira</h3>
-                        <p>Designer <br> RA:2650832013014.</p>
-                        <p> 3º semestre de Sistemas para Internet, trabalhando em controladoria , mora em São Roque -
+                        <h3 class="mudar">Alexandra Oliveira</h3>
+                        <p class="mudar">Designer <br> RA:2650832013014.</p>
+                        <p class="mudar"> 3º semestre de Sistemas para Internet, trabalhando em controladoria , mora em São Roque -
                             SP.</p>
 
                     </div>
@@ -119,10 +119,10 @@
                     <div class="espale col-lg-12 col-md-12 col-sm-12">
                         <img src="images/lucas.png" alt="Imagem do colaborador Lucas Jun Ichi Ohara" />
                         <br>
-                        <h3>Lucas Jun Ichi Ohara</h3>
-                        <p>Designer <br> RA:2650832013022
+                        <h3 class="mudar">Lucas Jun Ichi Ohara</h3>
+                        <p class="mudar">Designer <br> RA:2650832013022
                         </p>
-                        <p>
+                        <p class="mudar">
                             22 anos, 3º semestre de Sistemas para Internet, apaixonado por front-end, moro de Ibiuna-SP.
                         </p>
                     </div>
@@ -134,17 +134,17 @@
                         <img src="images/ninja.png" alt="Imagem de um ninja endereçado ao envio de curriculo" />
                         <br>
 
-                        <h3>Você</h3>
+                        <h3 class="mudar">Você</h3>
                         <br>
 
 
                         <a href="mailto:portalacessibilidade@gmail.com" target="_blank"
                             class="botao btn btn-primary active">
-                            <b>Envie seu Currículo</b>
+                            <b class="mudar">Envie seu Currículo</b>
                         </a>
                         <br>
                         <br>
-                        <p>
+                        <p class="mudar">
                             Venha fazer parte de nossa equipe!!
                         </p>
 
@@ -157,21 +157,21 @@
                     <div class="espale col-lg-12 col-md-12 col-sm-12">
                         <img src="images/rodrigo.png" alt="Imagem da colaborador Rodrigo de Moraes" />
                         <br>
-                        <h3>Rodrigo de Moraes</h3>
-                        <p>Coder<br> RA:2650832013030 </p>
+                        <h3 class="mudar">Rodrigo de Moraes</h3>
+                        <p class="mudar">Coder<br> RA:2650832013030 </p>
 
-                        <p>27 anos, trabalha na area da Educação, 3ºsemestre de Sistemas, mora em São Roque-SP.</p>
+                        <p class="mudar">27 anos, trabalha na area da Educação, 3ºsemestre de Sistemas, mora em São Roque-SP.</p>
                     </div>
 
 
                     <div class="espale col-lg-12 col-md-12 col-sm-12">
                         <img src="images/Esau.png" alt="Imagem da colaborador Esaú Reis" />
                         <br>
-                        <h3>Esaú Reis</h3>
-                        <p>Coder<br> RA:2650832013007
+                        <h3 class="mudar">Esaú Reis</h3>
+                        <p class="mudar">Coder<br> RA:2650832013007
                         </p>
 
-                        <p>30 anos, trabalha na Educação a 11 anos, 3ºsemestre de Sistemas, mora em Itapevi-SP.</p>
+                        <p class="mudar">30 anos, trabalha na Educação a 11 anos, 3ºsemestre de Sistemas, mora em Itapevi-SP.</p>
                     </div>
                 </div>
 
@@ -219,24 +219,30 @@
 
         // Aqui eu to pegando todos os campos de textos para mudar depois o atribudo font-size pela classe "mudar"
         // basta colocar no atributo class="mudar" que ele vai cair aqui
-        var main = document.querySelector('.mudar');
+        var main = $('.mudar');
+
+
 
         // Aqui criou uma função que pega o font-size que está "agora" 
         var getfontsize = (el) => {
             let size = window.getComputedStyle(el, null)
-                .getPropertyValue('font-size');
+            .getPropertyValue('font-size');
             return parseFloat(size);
         }
 
         // Aqui ele cria um evento de clicar, e quando clica ele chama a função pega o valor font-size e aumenta ele em +1
         // Exemplo: uma tag p tem font-size de 12px, ele pega esse 12px e da +1 nela e salva no elemento dnovo
         increase.addEventListener('click', () => {
-            main.style.fontSize = (getfontsize(main) + 1) + 'px';
+            $(main).each(function( index ) {
+                this.style.fontSize = (getfontsize(this) + 1) + 'px';
+            });
         })
 
         //aqui é o evento ao contrario diminui 1 px
         decrease.addEventListener('click', () => {
-            main.style.fontSize = (getfontsize(main) - 1) + 'px';
+            $(main).each(function( index ) {
+                this.style.fontSize = (getfontsize(this) - 1) + 'px';
+            });
         })
 
 

@@ -35,10 +35,10 @@
                                 <a class="nav-link btn" href="#rodape">[3] Ir para o rodapé</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link btn" id="aumentar">+A</a>
+                                <a class="nav-link btn" tabindex="0" id="aumentar">+A</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link btn" id="diminuir">-A</a>
+                                <a class="nav-link btn"  tabindex="0" id="diminuir">-A</a>
                             </li>
                         </ul>
                     </div>
@@ -90,12 +90,12 @@
                 </div>
 
                 <div class="col-lg-12 col-md-12 col-sm-12  espacamento titulohome">
-                    <h1>Acessibilidade</h1>
+                    <h1 class="mudar">Acessibilidade</h1>
                 </div>
 
 
                 <div class="col-lg-8 col-md-8 col-sm-8 offset-2 fontimg2 espacamento">
-                    <P>“Para a maioria das pessoas, a tecnologia torna a vida mais fácil. Para as pessoas com
+                    <P class="mudar">“Para a maioria das pessoas, a tecnologia torna a vida mais fácil. Para as pessoas com
                         deficiência, a tecnologia torna a vida possível.” Mary Pat Radabaugh, ex-diretora do Centro
                         Nacional de Apoio para Pessoas com Deficiência da
                         IBM.
@@ -160,7 +160,7 @@
 
                     <img src="images/home3.jpg" width="450" class="img-fluid"
                         alt="Homem com deficiencia de locomoção em sua cadeira de rodas" />
-                    <p class="fontimg2">“Toda pessoa com deficiência tem direito à igualdade de oportunidades como as
+                    <p class="fontimg2 mudar">“Toda pessoa com deficiência tem direito à igualdade de oportunidades como as
                         demais pessoas e não sofrerá nenhuma espécie de discriminação” — é o que diz a Lei Brasileira de
                         Inclusão da Pessoa com Deficiência
 
@@ -173,11 +173,11 @@
 
             <section class="row espacamento offset-1 col-lg-10 col-md-10 col-sm-10">
 
-                <div class="col-12 caixa">
-                    <P>A acessibilidade é obrigatória para organizações públicas e privadas, conforme a Lei Brasileira
+                <div class="col-12 caixa mudar">
+                    <P class="mudar">A acessibilidade é obrigatória para organizações públicas e privadas, conforme a Lei Brasileira
                         de Inclusão</P>
                     <br>
-                    <p>Lei nº 13.146 , de 6 de julho de 2015:
+                    <p class="mudar">Lei nº 13.146 , de 6 de julho de 2015:
                         <br>
                         <br> "Art. 63. É obrigatória a acessibilidade nos sítios da internet mantidos por empresas com
                         sede ou representação comercial no País ou por órgãos de governo, para uso da pessoa com
@@ -189,7 +189,7 @@
 
 
                     <a href="http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank"
-                        class="botao btn btn-primary active">
+                        class="botao btn btn-primary active mudar">
                         <img src="images/btnhome.png" width="40" class="img-fluid"
                             alt="Botão para acessar a Lei nº 13.146 "> Saiba mais
                     </a>
@@ -242,24 +242,30 @@
 
         // Aqui eu to pegando todos os campos de textos para mudar depois o atribudo font-size pela classe "mudar"
         // basta colocar no atributo class="mudar" que ele vai cair aqui
-        var main = document.querySelector('.mudar');
+        var main = $('.mudar');
+
+
 
         // Aqui criou uma função que pega o font-size que está "agora" 
         var getfontsize = (el) => {
             let size = window.getComputedStyle(el, null)
-                .getPropertyValue('font-size');
+            .getPropertyValue('font-size');
             return parseFloat(size);
         }
 
         // Aqui ele cria um evento de clicar, e quando clica ele chama a função pega o valor font-size e aumenta ele em +1
         // Exemplo: uma tag p tem font-size de 12px, ele pega esse 12px e da +1 nela e salva no elemento dnovo
         increase.addEventListener('click', () => {
-            main.style.fontSize = (getfontsize(main) + 1) + 'px';
+            $(main).each(function( index ) {
+                this.style.fontSize = (getfontsize(this) + 1) + 'px';
+            });
         })
 
         //aqui é o evento ao contrario diminui 1 px
         decrease.addEventListener('click', () => {
-            main.style.fontSize = (getfontsize(main) - 1) + 'px';
+            $(main).each(function( index ) {
+                this.style.fontSize = (getfontsize(this) - 1) + 'px';
+            });
         })
 
 

@@ -36,10 +36,10 @@
                                 <a class="nav-link btn" href="#rodape">[3] Ir para o rodapé</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link btn" id="aumentar">+A</a>
+                                <a class="nav-link btn" tabindex="0" id="aumentar">+A</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link btn" id="diminuir">-A</a>
+                                <a class="nav-link btn"  tabindex="0" id="diminuir">-A</a>
                             </li>
                         </ul>
                     </div>
@@ -59,13 +59,13 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="Index.html">Home</a>
+                                    <a class="nav-link" aria-current="page" href="Index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="QuemSomos.html">Quem Somos</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="Deficiencias.html">Deficiências</a>
+                                    <a class="nav-link active"  aria-current="page" href="Deficiencias.html">Deficiências</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="Legislacao.html">Legislação</a>
@@ -91,7 +91,7 @@
                 </div>
                 <div class="row">
                     <div id="conteudo" class="col-lg-6 col-sm-12">
-                        <h1 class="text-center">O que é Deficiência?</h1>
+                        <h1 class="text-center mudar">O que é Deficiência?</h1>
                         <p>Deficiência é quando se há uma perda ou anomalia que acabe limitando uma pessoa, sejam elas
                             físicas, sensoriais ou intelectuais.
                             De modo geral, o conceito tem relação com grau alto de distúrbio nas funções psicológicas,
@@ -136,14 +136,14 @@
 
 
 
-            <h2 class="col-12 text-center up-1 d-1">
+            <h2 class="col-12 text-center up-1 d-1 mudar">
                 Principais tipos de deficiência
             </h2>
 
 
             <section class="row offset-1 col-lg-10 col-md-10 col-sm-10 caixa d-1">
                 <div class="col-lg-3 col-sm-12 offset-1">
-                    <h3>Deficiência visual:</h3>
+                    <h3 class="mudar">Deficiência visual:</h3>
                     <img class="img-fluid" src="images/visao.jpg" alt="simbolo de  um olho">
                 </div>
                 <div class="col-lg-7 col-sm-12">
@@ -162,7 +162,7 @@
 
             <section class="row offset-1 col-lg-10 col-md-10 col-sm-10 caixa d-1">
                 <div class="col-lg-3 col-sm-12 offset-1">
-                    <h3 class="text-center">Deficiência motora:</h3>
+                    <h3 class="text-center mudar">Deficiência motora:</h3>
                     <img class="img-fluid text-center" src="images/motora.jpg" alt="simbolo de uma cadeira de rodas">
                 </div>
                 <div class="col-lg-7 col-sm-12">
@@ -194,7 +194,7 @@
 
             <section class="row offset-1 col-lg-10 col-md-10 col-sm-10 caixa d-1">
                 <div class="col-lg-3 col-sm-12 offset-1">
-                    <h3>Deficiência Intelectual:</h3>
+                    <h3 class="mudar">Deficiência Intelectual:</h3>
                     <img class="img-fluid text-center" src="images/intelectual.png"
                         alt="simbolo de uma cadeira de rodas">
                 </div>
@@ -227,7 +227,7 @@
 
             <section class="row offset-1 col-lg-10 col-md-10 col-sm-10 caixa d-1">
                 <div class="col-lg-3 col-sm-12 offset-1">
-                    <h3>Deficiência Auditiva:</h3>
+                    <h3 class="mudar">Deficiência Auditiva:</h3>
                     <img class="img-fluid" src="images/auditiva.png" alt="simbolo de um aparelho auditivo">
                 </div>
                 <div class="col-lg-7 col-sm-12">
@@ -295,31 +295,36 @@
 
     <!--Aqui começa a mágica do javascript :3-->
     <script type="text/javascript">
-
         //Aqui você ta pegando o botao aumentar  e diminuir pelo ID deles
         var increase = document.querySelector("#aumentar");
         var decrease = document.querySelector("#diminuir");
 
         // Aqui eu to pegando todos os campos de textos para mudar depois o atribudo font-size pela classe "mudar"
-        // basta colocar no atributp que ele vai cair aqui
-        var main = document.querySelector('.mudar');
+        // basta colocar no atributo class="mudar" que ele vai cair aqui
+        var main = $('.mudar');
+
+
 
         // Aqui criou uma função que pega o font-size que está "agora" 
         var getfontsize = (el) => {
             let size = window.getComputedStyle(el, null)
-                .getPropertyValue('font-size');
+            .getPropertyValue('font-size');
             return parseFloat(size);
         }
 
         // Aqui ele cria um evento de clicar, e quando clica ele chama a função pega o valor font-size e aumenta ele em +1
         // Exemplo: uma tag p tem font-size de 12px, ele pega esse 12px e da +1 nela e salva no elemento dnovo
         increase.addEventListener('click', () => {
-            main.style.fontSize = (getfontsize(main) + 1) + 'px';
+            $(main).each(function( index ) {
+                this.style.fontSize = (getfontsize(this) + 1) + 'px';
+            });
         })
 
         //aqui é o evento ao contrario diminui 1 px
         decrease.addEventListener('click', () => {
-            main.style.fontSize = (getfontsize(main) - 1) + 'px';
+            $(main).each(function( index ) {
+                this.style.fontSize = (getfontsize(this) - 1) + 'px';
+            });
         })
 
 
@@ -352,8 +357,6 @@
                 location.href = "#rodape";
             }
         });
-
-
     </script>
 </body>
 

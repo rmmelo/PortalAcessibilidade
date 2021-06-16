@@ -35,10 +35,10 @@
                                 <a class="nav-link btn" href="#rodape">[3] Ir para o rodapé</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link btn" id="aumentar">+A</a>
+                                <a class="nav-link btn" tabindex="0" id="aumentar">+A</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link btn" id="diminuir">-A</a>
+                                <a class="nav-link btn"  tabindex="0" id="diminuir">-A</a>
                             </li>
                         </ul>
                     </div>
@@ -58,7 +58,7 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="Index.html">Home</a>
+                                    <a class="nav-link" href="Index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="QuemSomos.html">Quem Somos</a>
@@ -67,7 +67,7 @@
                                     <a class="nav-link" href="Deficiencias.html">Deficiências</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="Legislacao.html">Legislação</a>
+                                    <a class="nav-link active" aria-current="page" href="Legislacao.html">Legislação</a>
                                 </li>
 
                             </ul>
@@ -78,14 +78,14 @@
 
 
         </header>
-        <main role="main" id="main">
-            <article class="row">
+        <main role="main" id="main" class="row mudar">
+            <article class="row mudar">
                 <div class="col-10 offset-1">
                     <img class="img-legislacao img-w3c" src="images/legislacao.jpg"
                         alt="Banner apresentando a página sobre legislção, ao lado direito a uma inslutração de uma balança">
                 </div>
-                <div id="conteudo" class="col-10 offset-1">
-                    <h1 class="text-center">Constituição Brasileira - Lei Brasileira de Inclusão</h1>
+                <div id="conteudo" class="col-10 offset-1 mudar">
+                    <h1 class="text-center mudar">Constituição Brasileira - Lei Brasileira de Inclusão</h1>
                     <div class="mudar">
                         <p>O principal objetivo da criação da Constituição Brasileira de 1988 foi de assegurar os
                             direitos sociais e individuais de cada Brasileiro, isso inclui também as pessoas com
@@ -150,31 +150,36 @@
 
     <!--Aqui começa a mágica do javascript :3-->
     <script type="text/javascript">
-
         //Aqui você ta pegando o botao aumentar  e diminuir pelo ID deles
         var increase = document.querySelector("#aumentar");
         var decrease = document.querySelector("#diminuir");
 
         // Aqui eu to pegando todos os campos de textos para mudar depois o atribudo font-size pela classe "mudar"
-        // basta colocar no atributp que ele vai cair aqui
-        var main = document.querySelector('.mudar');
+        // basta colocar no atributo class="mudar" que ele vai cair aqui
+        var main = $('.mudar');
+
+
 
         // Aqui criou uma função que pega o font-size que está "agora" 
         var getfontsize = (el) => {
             let size = window.getComputedStyle(el, null)
-                .getPropertyValue('font-size');
+            .getPropertyValue('font-size');
             return parseFloat(size);
         }
 
         // Aqui ele cria um evento de clicar, e quando clica ele chama a função pega o valor font-size e aumenta ele em +1
         // Exemplo: uma tag p tem font-size de 12px, ele pega esse 12px e da +1 nela e salva no elemento dnovo
         increase.addEventListener('click', () => {
-            main.style.fontSize = (getfontsize(main) + 1) + 'px';
+            $(main).each(function( index ) {
+                this.style.fontSize = (getfontsize(this) + 1) + 'px';
+            });
         })
 
         //aqui é o evento ao contrario diminui 1 px
         decrease.addEventListener('click', () => {
-            main.style.fontSize = (getfontsize(main) - 1) + 'px';
+            $(main).each(function( index ) {
+                this.style.fontSize = (getfontsize(this) - 1) + 'px';
+            });
         })
 
 
@@ -207,8 +212,6 @@
                 location.href = "#rodape";
             }
         });
-
-
     </script>
 </body>
 
